@@ -13,7 +13,9 @@ class ConfigLista extends StatelessWidget {
   }
 }
 
-Widget Lista(BuildContext context) { //LISTA DE CONFIGURAÇÕES
+
+//LISTA DE CONFIGURAÇÕES
+Widget Lista(BuildContext context) {
   return ListView(
     children: <Widget>[
       Card(

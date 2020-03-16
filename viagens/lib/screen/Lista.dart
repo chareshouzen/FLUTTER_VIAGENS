@@ -70,39 +70,30 @@ class ViagensState extends State<Viagens> {
         ),
       ),
       body: ListView.builder(
-
-
         itemCount: widget._viagens.length,
         itemBuilder: (context, indice) {
           final Viagem = widget._viagens[indice];
 
           return Dismissible(
-
             key: UniqueKey(),
             onDismissed: (DismissDirection direction) {
-              Scaffold
-                  .of(context)
-                  .showSnackBar(
+              Scaffold.of(context).showSnackBar(
                 SnackBar(
-                  content:  Text("Viagem: \n$Viagem \nFOI REMOVIDA!"),
-
+                  content: Text("Viagem: \n$Viagem \nFOI REMOVIDA!"),
                 ),
               );
             },
             child: ItemViagem(Viagem),
-            background: Container(color: Colors.red,
-                alignment: Alignment(-0.9, 0),
-                child: Icon(Icons.delete),
-
-
+            background: Container(
+              color: Colors.red,
+              alignment: Alignment(-0.9, 0),
+              child: Icon(Icons.delete),
             ),
-
           );
-          
-
         },
-
       ),
+
+
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.airplanemode_active,
@@ -136,6 +127,8 @@ class ViagensState extends State<Viagens> {
   }
 }
 
+
+// CLASSE ITENS VIAGEM
 class ItemViagem extends StatelessWidget {
   final VarViagem _viagem;
 
@@ -147,7 +140,8 @@ class ItemViagem extends StatelessWidget {
       child: ListTile(
         title: Text(_viagem.origem.toString()),
         subtitle: Text(_viagem.destino.toString()),
-    leading: Icon(Icons.flight),
+        leading: Icon(Icons.flight),
+        onTap: () {},
         /*   trailing: IconButton(
          icon: Icon(Icons.delete),
           onPressed: () {

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 
 
-
-AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
+//CAIXA DE DIALOGO MENU
+AlertaSair(BuildContext context) {
   Widget BotaoCancelar = FlatButton(
       child: Text('Cancelar'),
       onPressed: () {
@@ -30,7 +30,9 @@ AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
 }
 
 
-/* DeleteItem(BuildContext context) {  //CAIXA DE DIALOGO - DELETAR
+
+//CAIXA DE DIALOGO - DELETAR
+/* DeleteItem(BuildContext context) {
   Widget BotaoDeletar = FlatButton(
       child: Text('Deletar'),
       onPressed: () {
