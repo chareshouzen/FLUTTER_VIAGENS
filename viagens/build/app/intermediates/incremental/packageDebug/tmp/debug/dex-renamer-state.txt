@@ -1,0 +1,4 @@
+#Mon Mar 16 11:47:09 BRT 2020
+base.0=C\:\\Users\\marci\\Downloads\\FLUTTER_VIAGENS\\viagens\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
