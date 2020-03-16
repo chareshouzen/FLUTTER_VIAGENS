@@ -31,11 +31,11 @@ AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
 
 
 
-
-DeleteItem(BuildContext context) {  //CAIXA DE DIALOGO DELETAR
+ DeleteItem(BuildContext context) {  //CAIXA DE DIALOGO DELETAR
   Widget BotaoDeletar = FlatButton(
       child: Text('Deletar'),
       onPressed: () {
+
 
         print('apertou deletar');
 

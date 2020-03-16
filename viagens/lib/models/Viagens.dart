@@ -6,6 +6,7 @@ class VarViagem {
 
   @override
   String toString() {
-    return 'VarViagem{origem: $origem, destino: $destino}';
+    return 'Origem: $origem; \n'
+        'Destino: $destino.';
   }
 }

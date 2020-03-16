@@ -73,8 +73,30 @@ class ViagensState extends State<Viagens> {
         itemCount: widget._viagens.length,
         itemBuilder: (context, indice) {
           final Viagem = widget._viagens[indice];
-          return
-            ItemViagem(Viagem);
+
+          return Dismissible(
+            key: UniqueKey(),
+            onDismissed: (DismissDirection direction) {
+              Scaffold
+                  .of(context)
+                  .showSnackBar(
+                SnackBar(
+
+                  content:  Text("Viagem: \n$Viagem \nFOI REMOVIDA"),
+
+                ),
+              );
+            },
+            child: ItemViagem(Viagem),
+            background: Container(color: Colors.red,
+                alignment: Alignment(-0.9, 0),
+                child: Icon(Icons.delete),
+
+
+            ),
+
+          );
+
         },
       ),
       floatingActionButton: FloatingActionButton(
@@ -125,7 +147,6 @@ class ItemViagem extends StatelessWidget {
         trailing: IconButton(
           icon: Icon(Icons.delete),
           onPressed: () {
-
             DeleteItem(context);
           },
           iconSize: 24.00,
