@@ -70,19 +70,21 @@ class ViagensState extends State<Viagens> {
         ),
       ),
       body: ListView.builder(
+
+
         itemCount: widget._viagens.length,
         itemBuilder: (context, indice) {
           final Viagem = widget._viagens[indice];
 
           return Dismissible(
+
             key: UniqueKey(),
             onDismissed: (DismissDirection direction) {
               Scaffold
                   .of(context)
                   .showSnackBar(
                 SnackBar(
-
-                  content:  Text("Viagem: \n$Viagem \nFOI REMOVIDA"),
+                  content:  Text("Viagem: \n$Viagem \nFOI REMOVIDA!"),
 
                 ),
               );
@@ -96,8 +98,10 @@ class ViagensState extends State<Viagens> {
             ),
 
           );
+          
 
         },
+
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
@@ -143,14 +147,14 @@ class ItemViagem extends StatelessWidget {
       child: ListTile(
         title: Text(_viagem.origem.toString()),
         subtitle: Text(_viagem.destino.toString()),
-        leading: Icon(Icons.flight),
-        trailing: IconButton(
-          icon: Icon(Icons.delete),
+    leading: Icon(Icons.flight),
+        /*   trailing: IconButton(
+         icon: Icon(Icons.delete),
           onPressed: () {
             DeleteItem(context);
           },
           iconSize: 24.00,
-        ),
+        ), */
       ),
     );
   }

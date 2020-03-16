@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
   Widget BotaoCancelar = FlatButton(
-      child: Text('cancelar'),
+      child: Text('Cancelar'),
       onPressed: () {
         Navigator.of(context).pop();
       });
@@ -15,7 +15,7 @@ AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
     onPressed: () {
       exit(0);
     },
-    child: Text('ok'),
+    child: Text('Ok'),
   );
   AlertDialog alert = AlertDialog(
     content: Text('Deseja realmente sair?'),
@@ -30,8 +30,7 @@ AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
 }
 
 
-
- DeleteItem(BuildContext context) {  //CAIXA DE DIALOGO DELETAR
+/* DeleteItem(BuildContext context) {  //CAIXA DE DIALOGO - DELETAR
   Widget BotaoDeletar = FlatButton(
       child: Text('Deletar'),
       onPressed: () {
@@ -57,3 +56,4 @@ AlertaSair(BuildContext context) {  //CAIXA DE DIALOGO MENU
     },
   );
 }
+ */
