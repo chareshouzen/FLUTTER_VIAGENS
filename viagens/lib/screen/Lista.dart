@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:novo_projeto/models/Viagens.dart';
-import 'package:novo_projeto/models/aux_menu.dart';
+import 'package:novo_projeto/models/caixas_dialogos.dart';
 import 'package:novo_projeto/screen/config.dart';
 
 import 'Formulario.dart';
@@ -125,7 +125,7 @@ class ItemViagem extends StatelessWidget {
         trailing: IconButton(
           icon: Icon(Icons.delete),
           onPressed: () {
-            print('apertou delete');
+
             DeleteItem(context);
           },
           iconSize: 24.00,
