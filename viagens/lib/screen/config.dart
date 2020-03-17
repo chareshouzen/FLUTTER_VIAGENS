@@ -5,14 +5,12 @@ import 'Lista.dart';
 
 const _titleAppBarConfig = 'Configurações';
 
-
 class ConfigLista extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Lista(context);
   }
 }
-
 
 //LISTA DE CONFIGURAÇÕES
 Widget Lista(BuildContext context) {
@@ -32,14 +30,49 @@ Widget Lista(BuildContext context) {
                   },
                 ),
               );
-            }
+            }),
+      ),
+      Card(
+        child: ListTile(
+          leading: Icon(Icons.info),
+          title: Text('Info'),
+          subtitle: Text('Informações sobre o app'),
+          onTap: () {
+            Tema(context);
+          },
         ),
       ),
     ],
   );
 }
 
+Tema(BuildContext context) {
+  Widget OK = FlatButton(
+    textColor: Colors.grey[600],
+    child: Text('ok'),
+    onPressed: () {
+      Navigator.of(context).pop();
+    },
+  );
+  AlertDialog alert = AlertDialog(
+    content: Text(
+      'Versão 0.0.1 \nDesenvolvedor Covid-19 \nYear 2020',
+      textAlign: TextAlign.center,
+      style: TextStyle(color: Colors.grey[600]),
+    ),
+    actions: <Widget>[
+      OK,
+    ],
+  );
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
 
+//PAGINA CONFIGURAÇOES
 class Configuracoes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,4 +94,3 @@ class Configuracoes extends StatelessWidget {
     );
   }
 }
-

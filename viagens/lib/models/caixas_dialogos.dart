@@ -1,15 +1,14 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
+import 'package:novo_projeto/screen/Lista.dart';
 
 //CAIXA DE DIALOGO MENU
 AlertaSair(BuildContext context) {
   Widget BotaoCancelar = FlatButton(
       child: Text('Cancelar'),
       onPressed: () {
-        Navigator.of(context).pop();
+        Navigator.of(context).pop(); //FECHA DIALOGO
       });
   Widget BotaoOk = FlatButton(
     onPressed: () {
@@ -29,21 +28,23 @@ AlertaSair(BuildContext context) {
   );
 }
 
-
-
 //CAIXA DE DIALOGO - DELETAR
-/* DeleteItem(BuildContext context) {
+DeleteItem(BuildContext context) {
   Widget BotaoDeletar = FlatButton(
       child: Text('Deletar'),
       onPressed: () {
-
-
+        Scaffold.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Viagem Removida!"),
+            duration: Duration(seconds: 4),
+          ),
+        );
+        Navigator.of(context).pop();
         print('apertou deletar');
-
       });
   Widget BotaoCance = FlatButton(
     onPressed: () {
-      Navigator.of(context).pop();
+
     },
     child: Text('Cancelar'),
   );
@@ -58,4 +59,3 @@ AlertaSair(BuildContext context) {
     },
   );
 }
- */

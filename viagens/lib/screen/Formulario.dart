@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:novo_projeto/components/Editor.dart';
 import 'package:novo_projeto/models/Viagens.dart';
 
-
 const _tituloAppBar = 'ORIGEM E DESTINO';
 
 const _rotuloOrigem  = 'Origem';
@@ -15,7 +14,7 @@ const _hintDestino  = 'Ex.: China';
 const _botao = 'Confirmar';
 
 
-//CLASSE FOMRULARIO VIAGEM
+//CLASSE FORMULARIO VIAGEM
 class FormViagem extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -24,6 +23,7 @@ class FormViagem extends StatefulWidget {
 
 }
 
+//PAGINA FORMULARIO VIAGENS
 class FormViagemState extends State<FormViagem> {
   final _controladorOrigem = TextEditingController();
 
@@ -75,7 +75,7 @@ class FormViagemState extends State<FormViagem> {
       ),
     );
   }
-  void _CriaViagem(BuildContext context) {
+  void _CriaViagem(BuildContext context) { //FUNÇAO CRIAR VIAGEM
     debugPrint(_controladorOrigem.text);
     debugPrint(_controladorDestino.text);
 
@@ -85,7 +85,7 @@ class FormViagemState extends State<FormViagem> {
     if (origem != null && destino != null) {
       final ViagemCriada = VarViagem(origem, destino);
       debugPrint('Viagem Criada: $ViagemCriada');
-      Navigator.pop(context, ViagemCriada);
+      Navigator.pop(context, ViagemCriada);  //FECHA FORMULARIO
     }
   }
 }

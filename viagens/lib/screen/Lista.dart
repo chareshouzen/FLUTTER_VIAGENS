@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:novo_projeto/models/Viagens.dart';
 import 'package:novo_projeto/models/caixas_dialogos.dart';
 import 'package:novo_projeto/screen/config.dart';
-
 import 'Formulario.dart';
 
 class Viagens extends StatefulWidget {
@@ -77,11 +76,7 @@ class ViagensState extends State<Viagens> {
           return Dismissible(
             key: UniqueKey(),
             onDismissed: (DismissDirection direction) {
-              Scaffold.of(context).showSnackBar(
-                SnackBar(
-                  content: Text("Viagem: \n$Viagem \nFOI REMOVIDA!"),
-                ),
-              );
+              DeleteItem(context);
             },
             child: ItemViagem(Viagem),
             background: Container(
@@ -92,8 +87,6 @@ class ViagensState extends State<Viagens> {
           );
         },
       ),
-
-
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.airplanemode_active,
@@ -126,7 +119,6 @@ class ViagensState extends State<Viagens> {
     );
   }
 }
-
 
 // CLASSE ITENS VIAGEM
 class ItemViagem extends StatelessWidget {

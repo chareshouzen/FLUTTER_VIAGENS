@@ -1,4 +1,4 @@
-class VarViagem {
+class VarViagem {  //VARIAVEIS VIAGEM
   final String origem;
   final String destino;
 
