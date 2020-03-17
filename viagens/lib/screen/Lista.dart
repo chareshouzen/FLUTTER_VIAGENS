@@ -82,12 +82,28 @@ class ViagensState extends State<Viagens> {
             background: Container(
               color: Colors.red,
               alignment: Alignment(-0.9, 0),
-              child: Icon(Icons.delete),
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    child: Icon(
+                      Icons.delete,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                  Container(
+                    child: Text(
+                      'DELETE',
+                      style: TextStyle(color: Colors.grey[700]),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: BOTAO(),
+     /* FloatingActionButton(
         child: Icon(
           Icons.airplanemode_active,
         ),
@@ -115,7 +131,7 @@ class ViagensState extends State<Viagens> {
             },
           );
         },
-      ),
+      ), */
     );
   }
 }
@@ -143,5 +159,18 @@ class ItemViagem extends StatelessWidget {
         ), */
       ),
     );
+  }
+}
+
+class BOTAO extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+              onPressed:(){
+                print('APERTOU O AVIAOZAO');
+              },
+              child: Image.asset('IMAGENS/aviao.jpg',  height: 120.0,
+                width: 100.00),
+            );
   }
 }

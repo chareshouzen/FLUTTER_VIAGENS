@@ -31,6 +31,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marci\Downloads\FLUTTER_VIAGENS\viagens\IMAGENS" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -57,22 +62,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584117683853" />
-    <state width="1323" height="128" key="GridCell.Tab.0.bottom" timestamp="1584448540562">
+    <state width="1323" height="128" key="GridCell.Tab.0.bottom" timestamp="1584453138199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="128" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584448540562" />
-    <state width="1323" height="128" key="GridCell.Tab.0.center" timestamp="1584448540561">
+    <state width="1323" height="128" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584453138199" />
+    <state width="1323" height="128" key="GridCell.Tab.0.center" timestamp="1584453138199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="128" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584448540561" />
-    <state width="1323" height="128" key="GridCell.Tab.0.left" timestamp="1584448540561">
+    <state width="1323" height="128" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584453138199" />
+    <state width="1323" height="128" key="GridCell.Tab.0.left" timestamp="1584453138199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="128" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584448540561" />
-    <state width="1323" height="128" key="GridCell.Tab.0.right" timestamp="1584448540561">
+    <state width="1323" height="128" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584453138199" />
+    <state width="1323" height="128" key="GridCell.Tab.0.right" timestamp="1584453138199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="128" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584448540561" />
+    <state width="1323" height="128" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584453138199" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1584450646466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

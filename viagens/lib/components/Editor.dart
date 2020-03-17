@@ -14,14 +14,14 @@ class Editor extends StatelessWidget {
       controller: controlador,
       style: TextStyle(
         color: Colors.deepPurple,
-        fontSize: 24,
+        fontSize: 20,
       ),
       decoration: InputDecoration(
         icon: Icon(icone),
         labelText: rotulo,
         hintText: dica,
         hintStyle: TextStyle(
-          fontSize: 16,
+          fontSize: 20,
           color: Colors.purple[900],
         ),
       ),

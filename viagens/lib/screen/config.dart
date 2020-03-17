@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:novo_projeto/models/Viagens.dart';
+import 'package:novo_projeto/models/caixas_dialogos.dart';
 
 import 'Lista.dart';
 
@@ -38,7 +39,7 @@ Widget Lista(BuildContext context) {
           title: Text('Info'),
           subtitle: Text('Informações sobre o app'),
           onTap: () {
-            Tema(context);
+            Info(context);
           },
         ),
       ),
@@ -46,31 +47,7 @@ Widget Lista(BuildContext context) {
   );
 }
 
-Tema(BuildContext context) {
-  Widget OK = FlatButton(
-    textColor: Colors.grey[600],
-    child: Text('ok'),
-    onPressed: () {
-      Navigator.of(context).pop();
-    },
-  );
-  AlertDialog alert = AlertDialog(
-    content: Text(
-      'Versão 0.0.1 \nDesenvolvedor Covid-19 \nYear 2020',
-      textAlign: TextAlign.center,
-      style: TextStyle(color: Colors.grey[600]),
-    ),
-    actions: <Widget>[
-      OK,
-    ],
-  );
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return alert;
-    },
-  );
-}
+
 
 //PAGINA CONFIGURAÇOES
 class Configuracoes extends StatelessWidget {
