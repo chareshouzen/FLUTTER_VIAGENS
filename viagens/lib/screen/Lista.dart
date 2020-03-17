@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:novo_projeto/models/Viagens.dart';
 import 'package:novo_projeto/models/caixas_dialogos.dart';
 import 'package:novo_projeto/screen/config.dart';
@@ -68,41 +69,50 @@ class ViagensState extends State<Viagens> {
           ),
         ),
       ),
-      body: ListView.builder(
-        itemCount: widget._viagens.length,
-        itemBuilder: (context, indice) {
-          final Viagem = widget._viagens[indice];
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/IMAGENS/back.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView.builder(
+          itemCount: widget._viagens.length,
+          itemBuilder: (context, indice) {
+            final Viagem = widget._viagens[indice];
 
-          return Dismissible(
-            key: UniqueKey(),
-            onDismissed: (DismissDirection direction) {
-              DeleteItem(context);
-            },
-            child: ItemViagem(Viagem),
-            background: Container(
-              color: Colors.red,
-              alignment: Alignment(-0.9, 0),
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    child: Icon(
-                      Icons.delete,
-                      color: Colors.grey[700],
+            return Dismissible(
+              key: UniqueKey(),
+              onDismissed: (DismissDirection direction) {
+                DeleteItem(context);
+              },
+              child: ItemViagem(Viagem),
+              background: Container(
+                color: Colors.red,
+                alignment: Alignment(-0.9, 0),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      child: Icon(
+                        Icons.delete,
+                        color: Colors.grey[700],
+                      ),
                     ),
-                  ),
-                  Container(
-                    child: Text(
-                      'DELETE',
-                      style: TextStyle(color: Colors.grey[700]),
+                    Container(
+                      child: Text(
+                        'DELETE',
+                        style: TextStyle(color: Colors.grey[700]),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
-      floatingActionButton:/* BOTAO(), */
+      floatingActionButton:
+
      FloatingActionButton(
         child: Icon(
           Icons.airplanemode_active,
@@ -162,15 +172,17 @@ class ItemViagem extends StatelessWidget {
   }
 }
 
+
+
 class BOTAO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
               onPressed:(){
-                print('APERTOU O AVIAOZAO');
+                print('APERTOU O AVIAOZIN');
               },
-              child: Image.asset('IMAGENS/aviao.jpg',  height: 120.0,
-                width: 100.00),
+              child: Image.asset('IMAGENS/icone.png',  height: 50.0,
+                width: 55.00, alignment: Alignment.center, fit: BoxFit.cover),
             );
   }
 }

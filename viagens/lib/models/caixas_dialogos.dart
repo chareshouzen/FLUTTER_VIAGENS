@@ -7,7 +7,7 @@ AlertaSair(BuildContext context) {
   Widget BotaoCancelar = FlatButton(
       child: Text('Cancelar'),
       onPressed: () {
-        Navigator.of(context).pop(); //FECHA DIALOGO
+        Navigator.of(context).pop(); //FECHA BOX DIALOGO
       });
   Widget BotaoOk = FlatButton(
     onPressed: () {
@@ -30,20 +30,24 @@ AlertaSair(BuildContext context) {
 //CAIXA DE DIALOGO - DELETAR
 DeleteItem(BuildContext context) {
   Widget BotaoDeletar = FlatButton(
-      child: Text('Deletar'),
-      onPressed: () {
-        Scaffold.of(context).showSnackBar(
-          SnackBar(
-            content: Text("Viagem Removida!"),
-            duration: Duration(seconds: 4),
-          ),
-        );
-        Navigator.of(context).pop();
-        print('apertou deletar');
-      });
+    child: Text('Deletar',),
+    color: Colors.red[400],
+    onPressed: () {
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Viagem Removida!"),
+          duration: Duration(seconds: 4),
+        ),
+      );
+      Navigator.of(context).pop();
+      print('apertou deletar');
+    },
+  );
   Widget BotaoCance = FlatButton(
-    onPressed: () {},
+    onPressed: () {
+    },
     child: Text('Cancelar'),
+    textColor: Colors.grey,
   );
   AlertDialog alert = AlertDialog(
     content: Text('Deletar este item?'),

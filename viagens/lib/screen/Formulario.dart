@@ -46,6 +46,7 @@ class FormViagemState extends State<FormViagem> {
         ),
       ),
       body: SingleChildScrollView(
+
         child: Column(
           children: <Widget>[
             Editor(
@@ -72,6 +73,7 @@ class FormViagemState extends State<FormViagem> {
             ),
           ],
         ),
+
       ),
     );
   }

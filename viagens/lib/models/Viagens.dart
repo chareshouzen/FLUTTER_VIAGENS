@@ -1,5 +1,5 @@
 class VarViagem {  //VARIAVEIS VIAGEM
-  final String origem;
+   dynamic origem;
   final String destino;
 
   VarViagem(this.origem, this.destino);
