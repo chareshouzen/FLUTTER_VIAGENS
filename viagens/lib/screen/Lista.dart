@@ -102,8 +102,8 @@ class ViagensState extends State<Viagens> {
           );
         },
       ),
-      floatingActionButton: BOTAO(),
-     /* FloatingActionButton(
+      floatingActionButton:/* BOTAO(), */
+     FloatingActionButton(
         child: Icon(
           Icons.airplanemode_active,
         ),
@@ -131,7 +131,7 @@ class ViagensState extends State<Viagens> {
             },
           );
         },
-      ), */
+      ),
     );
   }
 }
