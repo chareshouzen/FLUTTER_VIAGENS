@@ -36,7 +36,7 @@ DeleteItem(BuildContext context) {
       Scaffold.of(context).showSnackBar(
         SnackBar(
           content: Text("Viagem Removida!"),
-          duration: Duration(seconds: 4),
+          duration: Duration(seconds: 3),
         ),
       );
       Navigator.of(context).pop();
@@ -63,7 +63,7 @@ DeleteItem(BuildContext context) {
 
 //CAIXA DIALOGO INFO
 Info(BuildContext context) {
-  Widget OK = FlatButton(
+  Widget botOK = FlatButton(
     textColor: Colors.grey[600],
     child: Text('ok'),
     onPressed: () {
@@ -74,10 +74,12 @@ Info(BuildContext context) {
     content: Text(
       'Versão 0.0.1 \nDesenvolvedor Covid-19 \nYear 2020',
       textAlign: TextAlign.center,
-      style: TextStyle(color: Colors.grey[600]),
+      style: TextStyle(color: Colors.grey[600],
+        fontStyle: FontStyle.italic,
+      ),
     ),
     actions: <Widget>[
-      OK,
+      botOK,
     ],
   );
   showDialog(

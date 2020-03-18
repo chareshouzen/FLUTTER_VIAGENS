@@ -31,49 +31,58 @@ class FormViagemState extends State<FormViagem> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(_tituloAppBar),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: <Color>[Colors.indigo[700], Colors.purple[100]],
+    return Container(  decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage("IMAGENS/back.jpg"),
+        fit: BoxFit.cover,
+      ),
+    ),
+
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(_tituloAppBar),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[Colors.indigo[700], Colors.purple[100]],
+              ),
             ),
           ),
         ),
-      ),
-      body: SingleChildScrollView(
+        body: SingleChildScrollView(
 
-        child: Column(
-          children: <Widget>[
-            Editor(
-                controlador: _controladorOrigem,
-                rotulo: _rotuloOrigem ,
-                dica: _hintOrigem,
-                icone: Icons.flight_takeoff),
-            Editor(
-                controlador: _controladorDestino,
-                rotulo: _rotuloDestino,
-                dica: _hintDestino,
-                icone: Icons.flight_land),
-            RaisedButton(
-              onPressed: () {
-                _CriaViagem(context);
-              },
-              child: Container(
-                child: Text(_botao),
-                height: 15.0,
+          child: Column(
+            children: <Widget>[
+              Editor(
+                  controlador: _controladorOrigem,
+                  rotulo: _rotuloOrigem ,
+                  dica: _hintOrigem,
+                  icone: Icons.flight_takeoff),
+              Editor(
+                  controlador: _controladorDestino,
+                  rotulo: _rotuloDestino,
+                  dica: _hintDestino,
+                  icone: Icons.flight_land),
+              RaisedButton(
+                onPressed: () {
+                  _CriaViagem(context);
+                },
+                child: Container(
+                  child: Text(_botao),
+                  height: 15.0,
+                ),
+                color: Colors.deepPurple[100],
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
               ),
-              color: Colors.deepPurple[100],
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(80.0)),
-            ),
-          ],
-        ),
+            ],
+          ),
 
+        ),
       ),
     );
   }

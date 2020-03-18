@@ -4,7 +4,7 @@ import 'package:novo_projeto/models/caixas_dialogos.dart';
 
 import 'Lista.dart';
 
-const _titleAppBarConfig = 'Configurações';
+const _titleAppBarConfig = 'CONFIGURAÇÕES';
 
 class ConfigLista extends StatelessWidget {
   @override
@@ -53,21 +53,30 @@ Widget Lista(BuildContext context) {
 class Configuracoes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(_titleAppBarConfig),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: <Color>[Colors.blueGrey[700], Colors.grey[400]],
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("IMAGENS/back.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(_titleAppBarConfig),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[Colors.blue[50], Colors.blueGrey[400], ],
+              ),
             ),
           ),
         ),
+        body: ConfigLista(),
       ),
-      body: ConfigLista(),
     );
   }
 }

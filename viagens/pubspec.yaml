@@ -41,8 +41,15 @@ flutter:
   uses-material-design: true
 
   assets:
-    - IMAGENS/icone.png
     - IMAGENS/back.jpg
+fonts:
+  - family: Raleway
+    fonts:
+        - asset: fonts/Raleway-Italic.ttf
+          style: italic
+
+
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
