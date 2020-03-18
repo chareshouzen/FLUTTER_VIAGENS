@@ -158,7 +158,12 @@ class ItemViagem extends StatelessWidget {
           _viagem.destino.toString(),
         ),
         leading: Icon(Icons.flight),
-        onTap: () {},
+        onLongPress: () {
+
+         return Edit(context);
+
+
+        },
         /*   trailing: IconButton(
              icon: Icon(Icons.delete),
               onPressed: () {

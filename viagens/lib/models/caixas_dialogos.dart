@@ -30,7 +30,9 @@ AlertaSair(BuildContext context) {
 //CAIXA DE DIALOGO - DELETAR
 DeleteItem(BuildContext context) {
   Widget BotaoDeletar = FlatButton(
-    child: Text('Deletar',),
+    child: Text(
+      'Deletar',
+    ),
     color: Colors.red[400],
     onPressed: () {
       Scaffold.of(context).showSnackBar(
@@ -44,8 +46,7 @@ DeleteItem(BuildContext context) {
     },
   );
   Widget BotaoCance = FlatButton(
-    onPressed: () {
-    },
+    onPressed: () {},
     child: Text('Cancelar'),
     textColor: Colors.grey,
   );
@@ -74,7 +75,8 @@ Info(BuildContext context) {
     content: Text(
       'Versão 0.0.1 \nDesenvolvedor Covid-19 \nYear 2020',
       textAlign: TextAlign.center,
-      style: TextStyle(color: Colors.grey[600],
+      style: TextStyle(
+        color: Colors.grey[600],
         fontStyle: FontStyle.italic,
       ),
     ),
@@ -88,4 +90,30 @@ Info(BuildContext context) {
       return alert;
     },
   );
+}
+
+Edit(BuildContext context) {
+  Widget BCancela = FlatButton(
+    child: Text('Cancelar'),
+    onPressed: () {
+      Navigator.of(context).pop();
+    },
+  );
+  Widget BEdit = FlatButton(
+    child: Text('Editar'),
+    onPressed: () {
+      print('quer editar, help');
+    },
+  );
+  AlertDialog alert = AlertDialog(
+    content: Text('Editar este item?'),
+    actions: <Widget>[BCancela, BEdit],
+  );
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+
 }
