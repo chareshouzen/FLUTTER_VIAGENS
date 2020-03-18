@@ -22,7 +22,7 @@ class Editor extends StatelessWidget {
         hintText: dica,
         hintStyle: TextStyle(
           fontSize: 20,
-          color: Colors.purple[900],
+          color: Colors.indigo[400],
         ),
       ),
     );

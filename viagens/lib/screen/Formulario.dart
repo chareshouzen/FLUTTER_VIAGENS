@@ -5,14 +5,13 @@ import 'package:novo_projeto/models/Viagens.dart';
 
 const _tituloAppBar = 'ORIGEM E DESTINO';
 
-const _rotuloOrigem  = 'Origem';
-const _hintOrigem  = 'Ex.: Brasil';
+const _rotuloOrigem = 'Origem';
+const _hintOrigem = 'Ex.: Brasil';
 
-const _rotuloDestino  = 'Destino';
-const _hintDestino  = 'Ex.: China';
+const _rotuloDestino = 'Destino';
+const _hintDestino = 'Ex.: China';
 
 const _botao = 'Confirmar';
-
 
 //CLASSE FORMULARIO VIAGEM
 class FormViagem extends StatefulWidget {
@@ -20,7 +19,6 @@ class FormViagem extends StatefulWidget {
   State<StatefulWidget> createState() {
     return FormViagemState();
   }
-
 }
 
 //PAGINA FORMULARIO VIAGENS
@@ -31,13 +29,13 @@ class FormViagemState extends State<FormViagem> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(  decoration: BoxDecoration(
-      image: DecorationImage(
-        image: AssetImage("IMAGENS/back.jpg"),
-        fit: BoxFit.cover,
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("IMAGENS/back.jpg"),
+          fit: BoxFit.cover,
+        ),
       ),
-    ),
-
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
@@ -48,18 +46,17 @@ class FormViagemState extends State<FormViagem> {
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: <Color>[Colors.indigo[700], Colors.purple[100]],
+                colors: <Color>[Colors.greenAccent[100], Colors.pink[100]],
               ),
             ),
           ),
         ),
         body: SingleChildScrollView(
-
           child: Column(
             children: <Widget>[
               Editor(
                   controlador: _controladorOrigem,
-                  rotulo: _rotuloOrigem ,
+                  rotulo: _rotuloOrigem,
                   dica: _hintOrigem,
                   icone: Icons.flight_takeoff),
               Editor(
@@ -81,12 +78,13 @@ class FormViagemState extends State<FormViagem> {
               ),
             ],
           ),
-
         ),
       ),
     );
   }
-  void _CriaViagem(BuildContext context) { //FUNÇAO CRIAR VIAGEM
+
+  void _CriaViagem(BuildContext context) {
+    //FUNÇAO CRIAR VIAGEM
     debugPrint(_controladorOrigem.text);
     debugPrint(_controladorDestino.text);
 
@@ -96,7 +94,7 @@ class FormViagemState extends State<FormViagem> {
     if (origem != null && destino != null) {
       final ViagemCriada = VarViagem(origem, destino);
       debugPrint('Viagem Criada: $ViagemCriada');
-      Navigator.pop(context, ViagemCriada);  //FECHA FORMULARIO
+      Navigator.pop(context, ViagemCriada); //FECHA FORMULARIO
     }
   }
 }

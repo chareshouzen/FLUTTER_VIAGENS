@@ -6,6 +6,7 @@ void main() => runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+
           primaryColor: Colors.indigo[300],
           accentColor: Colors.deepPurpleAccent[800],
             fontFamily: "Raleway",

@@ -60,9 +60,12 @@ class ViagensState extends State<Viagens> {
         ],
         centerTitle: true,
         title: Text(
-          'VIAGENS', style: TextStyle(fontFamily: "Raleway",fontSize: 26.0,
-
-          color: Colors.white,),
+          'V I A G E N S',
+          style: TextStyle(
+            fontFamily: "Raleway",
+            fontSize: 26.0,
+            color: Colors.white,
+          ),
         ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -78,7 +81,6 @@ class ViagensState extends State<Viagens> {
         itemCount: widget._viagens.length,
         itemBuilder: (context, indice) {
           final Viagem = widget._viagens[indice];
-
           return Dismissible(
             key: UniqueKey(),
             onDismissed: (DismissDirection direction) {
@@ -128,10 +130,6 @@ class ViagensState extends State<Viagens> {
               debugPrint('CHEGOU');
               if (ViagemRecebida != null) {
                 widget._viagens.add(ViagemRecebida);
-              } else {
-                Scaffold(
-                  body: Text('digite uma informação válida'),
-                );
               }
             },
           );
@@ -150,18 +148,24 @@ class ItemViagem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
+      color: Colors.transparent,
       child: ListTile(
-        title: Text(_viagem.origem.toString()),
-        subtitle: Text(_viagem.destino.toString()),
+        title: Text(
+          _viagem.origem.toString(),
+        ),
+        subtitle: Text(
+          _viagem.destino.toString(),
+        ),
         leading: Icon(Icons.flight),
         onTap: () {},
         /*   trailing: IconButton(
-         icon: Icon(Icons.delete),
-          onPressed: () {
-            DeleteItem(context);
-          },
-          iconSize: 24.00,
-        ), */
+             icon: Icon(Icons.delete),
+              onPressed: () {
+                DeleteItem(context);
+              },
+              iconSize: 24.00,
+            ), */
       ),
     );
   }
