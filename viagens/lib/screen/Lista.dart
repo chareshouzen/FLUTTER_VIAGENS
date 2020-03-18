@@ -60,7 +60,9 @@ class ViagensState extends State<Viagens> {
         ],
         centerTitle: true,
         title: Text(
-          'VIAGENS', style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.normal,fontSize: 20.0),
+          'VIAGENS', style: TextStyle(fontFamily: "Raleway",fontSize: 26.0,
+
+          color: Colors.white,),
         ),
         flexibleSpace: Container(
           decoration: BoxDecoration(

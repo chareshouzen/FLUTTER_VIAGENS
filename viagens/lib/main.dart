@@ -8,7 +8,7 @@ void main() => runApp(
         theme: ThemeData(
           primaryColor: Colors.indigo[300],
           accentColor: Colors.deepPurpleAccent[800],
-            fontFamily: 'Raleway',
+            fontFamily: "Raleway",
         ),
         home: Container(
           decoration: BoxDecoration(
