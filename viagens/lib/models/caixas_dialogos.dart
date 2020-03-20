@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //CAIXA DE DIALOGO MENU
@@ -28,17 +27,19 @@ AlertaSair(BuildContext context) {
 }
 
 //CAIXA DE DIALOGO - DELETAR
-DeleteItem(BuildContext context) {
+/*DeleteItem(BuildContext context) {
   Widget BotaoDeletar = FlatButton(
     child: Text(
       'Deletar',
     ),
     color: Colors.red[400],
     onPressed: () {
+      /* widget._viagens.removeAt(indice);  */ //DELETA PRA SMP
+
       Scaffold.of(context).showSnackBar(
         SnackBar(
           content: Text("Viagem Removida!"),
-          duration: Duration(seconds: 3),
+          duration: Duration(milliseconds: 500),
         ),
       );
       Navigator.of(context).pop();
@@ -46,7 +47,10 @@ DeleteItem(BuildContext context) {
     },
   );
   Widget BotaoCance = FlatButton(
-    onPressed: () {},
+    onPressed: () {
+
+
+    },
     child: Text('Cancelar'),
     textColor: Colors.grey,
   );
@@ -60,64 +64,63 @@ DeleteItem(BuildContext context) {
       return alert;
     },
   );
-}
+} */
 
 //CAIXA DIALOGO INFO
-Info(BuildContext context) {
-  Widget botOK = FlatButton(
-    textColor: Colors.grey[600],
-    child: Text('ok'),
-    onPressed: () {
-      Navigator.of(context).pop();
-    },
-  );
-  AlertDialog alert = AlertDialog(
-    content: Text(
-      'Versão 0.0.1 \nDesenvolvedor Covid-19 \nYear 2020',
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.grey[600],
-        fontStyle: FontStyle.italic,
+  Info(BuildContext context) {
+    Widget botOK = FlatButton(
+      textColor: Colors.grey[600],
+      child: Text('ok'),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+    AlertDialog alert = AlertDialog(
+      content: Text(
+        'Versão 0.0.1 \nDesenvolvedor Covid-19 \nYear 2020',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.grey[600],
+          fontStyle: FontStyle.italic,
+        ),
       ),
-    ),
-    actions: <Widget>[
-      botOK,
-    ],
-  );
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return alert;
-    },
-  );
-}
+      actions: <Widget>[
+        botOK,
+      ],
+    );
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
 
 
-Edit(BuildContext context) {
-  Widget BCancela = FlatButton(
-    child: Text('Cancelar'),
-    onPressed: () {
-      Navigator.of(context).pop();
-    },
-  );
-  Widget BEdit = FlatButton(
-    child: Text('Editar'),
-    onPressed: () {
-      print('quer editar, help');
-    },
-  );
-  AlertDialog alert = AlertDialog(
-    content: Text('Editar este item?'),
-    actions: <Widget>[BCancela, BEdit],
-  );
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return alert;
-    },
-  );
-
-}
+  Edit(BuildContext context) {
+    Widget BCancela = FlatButton(
+      child: Text('Cancelar'),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+    Widget BEdit = FlatButton(
+      child: Text('Editar'),
+      onPressed: () {
+        print('quer editar, help');
+      },
+    );
+    AlertDialog alert = AlertDialog(
+      content: Text('Editar este item?'),
+      actions: <Widget>[BCancela, BEdit],
+    );
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
 
 
 /*class ItemEditPage extends StatefulWidget {

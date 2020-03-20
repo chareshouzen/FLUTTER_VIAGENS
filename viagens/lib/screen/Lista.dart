@@ -82,32 +82,54 @@ class ViagensState extends State<Viagens> {
         itemBuilder: (context, indice) {
           final Viagem = widget._viagens[indice];
           return Dismissible(
+            movementDuration: const Duration(milliseconds: 1000),
             key: UniqueKey(),
-            onDismissed: (DismissDirection direction) {
-            widget._viagens.removeAt(indice);             //DELETA PRA SMP
-              DeleteItem(context);
+            // ignore: missing_return
+            confirmDismiss: (direction) async {
+              if (direction == DismissDirection.endToStart) {
+                final bool resposta = await showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        content: Text("Deletar este item?"),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text(
+                              "Cancelar",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                          FlatButton(
+                            child: Text(
+                              "Deletar",
+                              style: TextStyle(color: Colors.red),
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                widget._viagens.removeAt(indice);
+                              });
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ],
+                      );
+                    });
+                return resposta;
+              } else {
+                // TODO: Navigate to edit page;
+              }
             },
+            /* direction: DismissDirection.startToEnd, */
+            /*onDismissed: (DismissDirection direction) {
+                widget._viagens.removeAt(indice); //DELETA PRA SMP
+                DeleteItem(context); //CHAMA A CAIXA DE DIALOGO
+              }, */
             child: ItemViagem(Viagem),
-            background: Container(
-              color: Colors.red,
-              alignment: Alignment(-0.9, 0),
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    child: Icon(
-                      Icons.delete,
-                      color: Colors.grey[700],
-                    ),
-                  ),
-                  Container(
-                    child: Text(
-                      'DELETE',
-                      style: TextStyle(color: Colors.grey[700]),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            background: slideRightBackground(),
+            secondaryBackground: slideLeftBackground(),
           );
         },
       ),
@@ -125,11 +147,13 @@ class ViagensState extends State<Viagens> {
               },
             ),
           );
+          var vazio;
+          vazio = "";
           future.then(
             (ViagemRecebida) {
               debugPrint('$ViagemRecebida');
               debugPrint('CHEGOU');
-              if (ViagemRecebida != null) {
+              if (ViagemRecebida != vazio) {
                 widget._viagens.add(ViagemRecebida);
               }
             },
@@ -158,10 +182,9 @@ class ItemViagem extends StatelessWidget {
         subtitle: Text(
           _viagem.destino.toString(),
         ),
-        leading: Icon(Icons.flight),           //EDITAR
+        leading: Icon(Icons.flight), //EDITAR
         onLongPress: () {
-
-         return Edit(context);
+          return Edit(context);
         },
         /*   trailing: IconButton(
              icon: Icon(Icons.delete),
@@ -189,4 +212,50 @@ class BOTAO extends StatelessWidget {
           fit: BoxFit.cover),
     );
   }
+}
+
+Widget slideLeftBackground() {
+  return Container(
+    color: Colors.red[200],
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+        Container(
+          child: Icon(
+            Icons.delete,
+            color: Colors.white,
+          ),
+        ),
+        Container(
+          child: Text(
+            'DELETE',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget slideRightBackground() {
+  return Container(
+    color: Colors.blueAccent[100],
+    alignment: Alignment(-0.9, 0),
+    child: Row(
+      children: <Widget>[
+        Container(
+          child: Icon(
+            Icons.edit,
+            color: Colors.white,
+          ),
+        ),
+        Container(
+          child: Text(
+            'EDIT',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+      ],
+    ),
+  );
 }
