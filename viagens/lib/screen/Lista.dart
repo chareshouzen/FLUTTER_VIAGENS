@@ -84,6 +84,7 @@ class ViagensState extends State<Viagens> {
           return Dismissible(
             key: UniqueKey(),
             onDismissed: (DismissDirection direction) {
+            widget._viagens.removeAt(indice);             //DELETA PRA SMP
               DeleteItem(context);
             },
             child: ItemViagem(Viagem),
@@ -157,12 +158,10 @@ class ItemViagem extends StatelessWidget {
         subtitle: Text(
           _viagem.destino.toString(),
         ),
-        leading: Icon(Icons.flight),
+        leading: Icon(Icons.flight),           //EDITAR
         onLongPress: () {
 
          return Edit(context);
-
-
         },
         /*   trailing: IconButton(
              icon: Icon(Icons.delete),

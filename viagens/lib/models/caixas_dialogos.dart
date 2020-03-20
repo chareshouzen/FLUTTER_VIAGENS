@@ -92,6 +92,7 @@ Info(BuildContext context) {
   );
 }
 
+
 Edit(BuildContext context) {
   Widget BCancela = FlatButton(
     child: Text('Cancelar'),
@@ -117,3 +118,16 @@ Edit(BuildContext context) {
   );
 
 }
+
+
+/*class ItemEditPage extends StatefulWidget {
+  @override
+  _ItemEditPageState createState() => _ItemEditPageState();
+}
+
+class _ItemEditPageState extends State<ItemEditPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+} */

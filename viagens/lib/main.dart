@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:novo_projeto/screen/Lista.dart';
 
 void main() => runApp(
@@ -25,3 +24,4 @@ void main() => runApp(
         ),
       ),
     );
+
