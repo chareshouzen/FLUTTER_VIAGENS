@@ -23,7 +23,7 @@ Widget Lista(BuildContext context) {
             title: Text('Editar item'),
             onTap: () {
               debugPrint('EDITAR ITEM');
-              final Future<VarViagem> future = Navigator.push(
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {

@@ -119,7 +119,46 @@ class ViagensState extends State<Viagens> {
                     });
                 return resposta;
               } else {
-                // TODO: Navigate to edit page;
+                final bool resp = await showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        content: Text("Editar este item?"),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text(
+                              "Cancelar",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                          FlatButton(
+                            child: Text(
+                              "Editar",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            onPressed: () {
+                              /* setState(() {
+
+                              }); */
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Viagens();
+                                  },
+                                ),
+                              );
+
+                              //TODO ABRIR PAGINA EDITAR
+                            },
+                          ),
+                        ],
+                      );
+                    });
+                return resp;
               }
             },
             /* direction: DismissDirection.startToEnd, */
@@ -137,7 +176,7 @@ class ViagensState extends State<Viagens> {
         child: Icon(
           Icons.airplanemode_active,
         ),
-        backgroundColor: Colors.indigo[300],
+        backgroundColor: Colors.indigo[100],
         onPressed: () {
           final Future<VarViagem> future = Navigator.push(
             context,
@@ -150,10 +189,10 @@ class ViagensState extends State<Viagens> {
           var vazio;
           vazio = "";
           future.then(
-            (ViagemRecebida) {
+            (ViagemRecebida) async {
               debugPrint('$ViagemRecebida');
               debugPrint('CHEGOU');
-              if (ViagemRecebida != vazio) {
+              if (ViagemRecebida != null) {
                 widget._viagens.add(ViagemRecebida);
               }
             },
@@ -198,12 +237,14 @@ class ItemViagem extends StatelessWidget {
   }
 }
 
+//BOTAO COM IMAGEM TESTE
+/*
 class BOTAO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: () {
-        print('APERTOU O AVIAOZIN');
+        print('APERTOU O ICONE');
       },
       child: Image.asset('IMAGENS/icone.png',
           height: 50.0,
@@ -212,7 +253,7 @@ class BOTAO extends StatelessWidget {
           fit: BoxFit.cover),
     );
   }
-}
+} */
 
 Widget slideLeftBackground() {
   return Container(
