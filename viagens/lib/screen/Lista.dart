@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:novo_projeto/models/Viagens.dart';
 import 'package:novo_projeto/models/caixas_dialogos.dart';
 import 'package:novo_projeto/screen/config.dart';
+import 'FormEditViagem.dart';
 import 'Formulario.dart';
 
 class Viagens extends StatefulWidget {
@@ -186,8 +187,7 @@ class ViagensState extends State<Viagens> {
               },
             ),
           );
-          var vazio;
-          vazio = "";
+          var vazio = "";
           future.then(
             (ViagemRecebida) async {
               debugPrint('$ViagemRecebida');
@@ -222,6 +222,16 @@ class ItemViagem extends StatelessWidget {
           _viagem.destino.toString(),
         ),
         leading: Icon(Icons.flight), //EDITAR
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return FormEditViagem(_viagem);
+              },
+            ),
+          );
+        },
         onLongPress: () {
           return Edit(context);
         },
