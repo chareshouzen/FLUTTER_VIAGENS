@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/baba/tema" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -63,26 +63,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583861952619" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1584618555639">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1584969921127">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584618555639" />
-    <state width="1323" height="23" key="GridCell.Tab.0.bottom" timestamp="1584968591372">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584969921127" />
+    <state width="1323" height="117" key="GridCell.Tab.0.bottom" timestamp="1585066882387">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="23" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584968591372" />
-    <state width="1323" height="23" key="GridCell.Tab.0.center" timestamp="1584968591372">
+    <state width="1323" height="117" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585066882387" />
+    <state width="1323" height="117" key="GridCell.Tab.0.center" timestamp="1585066882387">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="23" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584968591372" />
-    <state width="1323" height="23" key="GridCell.Tab.0.left" timestamp="1584968591371">
+    <state width="1323" height="117" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585066882387" />
+    <state width="1323" height="117" key="GridCell.Tab.0.left" timestamp="1585066882387">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="23" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584968591371" />
-    <state width="1323" height="23" key="GridCell.Tab.0.right" timestamp="1584968591372">
+    <state width="1323" height="117" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585066882387" />
+    <state width="1323" height="117" key="GridCell.Tab.0.right" timestamp="1585066882387">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="23" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584968591372" />
+    <state width="1323" height="117" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585066882387" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1584450646466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

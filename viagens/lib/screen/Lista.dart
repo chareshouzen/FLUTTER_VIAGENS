@@ -141,9 +141,6 @@ class ViagensState extends State<Viagens> {
                               style: TextStyle(color: Colors.blue),
                             ),
                             onPressed: () {
-                              /* setState(() {
-
-                              }); */
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -215,35 +212,60 @@ class ItemViagem extends StatelessWidget {
       elevation: 0,
       color: Colors.transparent,
       child: ListTile(
-        title: Text(
-          _viagem.origem.toString(),
-        ),
-        subtitle: Text(
-          _viagem.destino.toString(),
-        ),
-        leading: Icon(Icons.flight), //EDITAR
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return FormEditViagem(_viagem);
-              },
-            ),
-          );
-        },
-        onLongPress: () {
-          return Edit(context);
-        },
-        /*   trailing: IconButton(
+          title: Text(
+            _viagem.origem.toString(),
+          ),
+          subtitle: Text(
+            _viagem.destino.toString(),
+          ),
+          leading: Icon(Icons.flight),
+          //EDITAR
+          onTap: () {},
+          onLongPress: () async {
+            final bool resp = await showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    content: Text("Editar este item?"),
+                    actions: <Widget>[
+                      FlatButton(
+                        child: Text(
+                          "Cancelar",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      FlatButton(
+                        child: Text(
+                          "Editar",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return FormEditViagem(_viagem);
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  );
+                });
+            return resp;
+          }),
+    );
+    /*   trailing: IconButton(
              icon: Icon(Icons.delete),
               onPressed: () {
                 DeleteItem(context);
               },
               iconSize: 24.00,
             ), */
-      ),
-    );
   }
 }
 

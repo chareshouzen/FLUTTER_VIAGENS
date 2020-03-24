@@ -48,7 +48,7 @@ AlertaSair(BuildContext context) {
   );
   Widget BotaoCance = FlatButton(
     onPressed: () {
-
+  Navigator.of(context).pop();
 
     },
     child: Text('Cancelar'),
